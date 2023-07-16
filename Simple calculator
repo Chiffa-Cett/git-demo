@@ -1,3 +1,4 @@
+
 while True:
     #print out the menu
     print(
@@ -7,7 +8,7 @@ while True:
     2.Subtract two numbers
     3.Divide two numbers
     4.Multiple two numbers
-    5.Calculate 15% tax on a value
+    5.Calculate 8% tax on a value
     6.Calculate monthly payments, given a total amount and a number of years
     7.Quit
     
@@ -23,6 +24,7 @@ while True:
         result = number_1 + number_2
         print("Result is:", result)
     #else ifuser choose 2, substract 2 numbers
+    
     elif userChoice == 2:
         print("SUBSTRAT TWO NUMBERS")
         number_1 = float(input("First number:"))
@@ -30,5 +32,35 @@ while True:
         result = number_1 - number_2
         print("Result is:", result)
     #fill in the rest
+    
+    elif userChoice == 3:
+        print("DEVIDE TWO NUMBERS")
+        number_1 = float(input("First number:"))
+        number_2 = float(input("Second number:"))
+        result = number_1 / number_2
+        print("Result is:", result)
+        
+    elif userChoice == 4:
+        print("MULTIPLE TWO NUMBERS")
+        number_1 = float(input("First number:"))
+        number_2 = float(input("Second number:"))
+        result = number_1 * number_2
+        print("Result is:", result)  
+        
+    elif userChoice == 5:
+        print("Calculate 8% tax on a value")
+        amount = float(input("Enter amount:"))
+        result = amount * 0.08
+        print("Result is:", result) 
+    
+    elif userChoice == 6:
+        print("Calculate monthly payments")
+        amount = float(input("Enter total amount:"))
+        number_of_years = float(input("Enter number of years:"))
+        paymant = amount / (number_of_years * 12)
+        print("Result is:", result) 
+    
+    
     elif userChoice == 7:
+        print("Thank you! Goodbye!")
         break
