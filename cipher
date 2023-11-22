@@ -1,0 +1,28 @@
+import string
+
+def ceaser_encrypt(message, key):
+
+  shift = key % 26
+  cipher = str.maketrans(string.ascii_lowercase, string.ascii_lowercase[shift:] + string.ascii_lowercase[:shift])
+
+  encrypted_message = message.lower().translate(cipher)
+  
+  return encrypted_message
+
+
+def ceasar_decrypt(encrypted_message, key):
+
+  shift = 26 - (key % 26)
+  cipher = str.maketrans(string.ascii_lowercase, string.ascii_lowercase[shift:] + string.ascii_lowercase[:shift])
+
+  message = encrypted_message.translate(cipher)
+  return message
+
+message = "Eugene Pefti"
+key = 3
+
+encrypted_message = ceaser_encrypt(message, key)
+print(f"Encrypted_message: {encrypted_message}")
+
+decrypted_message = ceasar_decrypt(encrypted_message, key)
+print(f"Decrypted_message: {decrypted_message}")
